@@ -42,7 +42,7 @@ defaults
     timeout server  50000
 
 frontend https-in
-    bind *:443 ssl crt /etc/haproxy/certs/www.helenbot.tech.pem
+    bind *:443 ssl crt /etc/haproxy/certs/www.globalafri.tech.pem
     default_backend web-backend
 
 frontend http-in
@@ -51,8 +51,8 @@ frontend http-in
 
 backend web-backend
     balance roundrobin
-    server web-01 54.172.16.102:80 check
-    server web-02 18.233.224.205:80 check
+    server web-01 184.72.177.49:80 check
+    server web-02 44.204.152.71:80 check
 EOF
 
 # Restart HAProxy using 'service' command
